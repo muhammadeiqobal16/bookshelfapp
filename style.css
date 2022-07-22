@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url(img/background/doodles.png);
+}
+.flex{
+    display: flex;
+}
+header{
+    padding: 5px;
+    color: white;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+header h1{
+    font-size: 3em;
+    text-align: center;
+}
+#content{
+    width: 50%;
+    margin: 0 auto;
+}
+section{
+    margin: 20px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+section h2{
+    text-align: center;
+}
+#submitForm{
+    margin: 10px;
+    gap: 5px;
+    flex-direction: column;
+}
+label{
+    font-weight: bold;
+    font-size: 1.3em;
+}
+input[type="text"], input[type="number"]{
+    padding: 2px;
+    font-size: 1.1em;
+}
+.titleSec, .authorSec, .yearSec{
+    flex-direction: column;
+}
+#submitBtn{
+    padding: 3px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.bookElement{
+    padding: 10px 10px;
+    margin: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(216, 216, 245);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .6);
+    border-radius: 7px;
+}
+.blockingDiv{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    animation: fadeEffect .3s forwards;
+}
+@keyframes fadeEffect {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.confirmDiv{
+    max-width: 300px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: bold;
+}
+.confirmBtnDiv{
+    margin-top: 10px;
+    gap: 10px;
+}
+.confirmBtnDiv button{
+    padding: 2px 5px;
+}
+.actionDiv{
+    gap: 10px;
+    cursor: pointer;
+}
+.actionDiv img{
+    padding: 5px;
+    width: 1.5em;
+    border-radius: 100%;
+}
+#searchForm{
+    padding: 10px;
+    gap: 5px;
+}
+#inputSearch{
+    flex-basis: 100%;
+}
+#searchBtn{
+    padding: 3px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.resultDiv{
+    flex-direction: row;
+    margin-bottom: 10px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(216, 216, 245);
+    box-shadow: 0 0 3px rgba(0, 0, 0, .6);
+    border-radius: 7px;
+}
+.resultBook{
+    text-decoration: none;
+    color: black;
+}
+
+/* ------- RESPONSIVENESS -------- */
+/* Max-Width 992px */
+@media (max-width: 992px) {
+    #content{
+        width: 70%;
+    }
+}
+
+/* Max-Width 576px */
+@media (max-width: 576px) {
+    #content{
+        width: 90%;
+    }
+    #searchForm{
+        flex-direction: column;
+    }
+    #searchForm input[type="submit"]{
+        width: 20%;
+        font-size: .9em;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+    .bookElement{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .actionDiv{
+        align-self: flex-end;
+    }
+    header h1{
+        font-size: 2.5em;
+    }
+    label{
+        font-size: 1.1em;
+    }
+    input[type="text"], input[type="number"]{
+        font-size: 0.9em;
+    }
+    #submitBtn{
+        font-size: .9em;
+        cursor: pointer;
+    }
+}
+/* ------------------------------- */

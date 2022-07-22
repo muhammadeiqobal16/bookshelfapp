@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bookshelf Apps</h1>
+    </header>
+    <main>
+        <div id="content">
+            <section id="formSection">
+                <h2>ADD NEW BOOK</h2>
+
+                <form action="" id="submitForm" class="flex">
+                    <div class="formSec titleSec flex">
+                        <label for="inputTitle flex">Title</label>
+                        <input type="text" name="title" id="inputTitle" placeholder="The Art of Manipulation" required>
+                    </div>
+                    <div class="formSec authorSec flex">
+                        <label for="inputAuthor">Author</label>
+                        <input type="text" name="author" id="inputAuthor" placeholder="R.B Sparkman" required>
+                    </div>
+                    <div class="formSec yearSec flex">
+                        <label for="inputYear">Year</label>
+                        <input type="number" name="year" maxlength="4" min="1450" max="2022" id="inputYear" placeholder="1986" required>
+                    </div>
+                    <div class="formSec statusSec">
+                        <label for="inputStatus">Finished?</label>
+                        <input type="checkbox" name="status" id="inputStatus">
+                    </div>
+                    <div class="formSec submitBtnSec">
+                        <input type="submit" id="submitBtn" value="Submit">
+                    </div>
+                </form>
+            </section>
+
+            <section id="searchSection">
+                <h2>SEARCH BOOK</h2>
+                <form id="searchForm" class="flex">
+                    <input type="text" name="search" id="inputSearch" placeholder="Book Title" required>
+                    <input type="submit" id="searchBtn" value="Search">
+                </form>
+
+                <div id="searchResultShelf"></div>
+            </section>
+
+            <section id="unfinishedSection">
+                <h2>UNFINISHED SHELF</h2>
+
+                <div id="unfinishedShelf"></div>
+            </section>
+
+            <section id="finishedSection">
+                <h2>FINISHED SHELF</h2>
+
+                <div id="finishedShelf"></div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
